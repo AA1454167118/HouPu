@@ -209,7 +209,7 @@
 	margin-top: 0.05rem;
 }
 .hotCourses{
-	display: flex;
+display: flex;
 	width: 6.4rem;
 	margin-top: 0.3rem;
 }

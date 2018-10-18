@@ -128,122 +128,119 @@
 </template>
 <script>
 export default {
-data() {
+  data () {
     return {
-        dialogTableVisible: false,
-        activeName: 'second',
-        dialogFormVisible: false,
-    };
-},
-    methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-      }
+      dialogTableVisible: false,
+      activeName: 'second',
+      dialogFormVisible: false
     }
-};
+  },
+  methods: {
+    handleClick (tab, event) {
+      console.log(tab, event)
+    }
+  }
+}
 </script>
 <style scoped>
 .outerLayer{
-    width: 6.4rem;
+width: 6.4rem;
 }
 .header{
-    position: relative;
-    margin-top: 0.1rem;
+position: relative;
+margin-top: 0.1rem;
 }
 .header li{
-    float: left;
-    list-style: none;
-    text-align: center;
-    width: 1.2rem;
-    height: 0.5rem;
-    font-size: 0.25rem;
-    color: #a0a0a0;
+float: left;
+list-style: none;
+text-align: center;
+width: 1.2rem;
+height: 0.5rem;
+font-size: 0.25rem;
+color: #a0a0a0;
 }
 .header li img{
-    margin-left: 0.05rem;
+margin-left: 0.05rem;
 }
 .search img{
-    width: 0.32rem;
-    height: 0.32rem;
-    position: absolute;
-    right: 0.1rem;
+width: 0.32rem;
+height: 0.32rem;
+position: absolute;
+right: 0.1rem;
 }
 .header li .shu{
-    width: 0.01rem;
-    height: 0.24rem;
-    margin-left: 0.3rem;
+width: 0.01rem;
+height: 0.24rem;
+margin-left: 0.3rem;
 }
 .CurriculumCategory{
-    background: #000;
+background: #000;
 }
 .hotCourses{
-	width: 6.4rem;
-    display: flex;
+width: 6.4rem;
+display: flex;
 }
 .videoCourses{
-	margin-left: 0.22rem;
-	width: 3.2rem;
-	border-radius: 10%;
+margin-left: 0.22rem;
+width: 3.2rem;
+border-radius: 10%;
 }
 .videoCourses img{
-	width: 2.8rem;
-	height: 1.7rem;
+width: 2.8rem;
+height: 1.7rem;
 }
 .videoName{
-	text-align: left;
-	margin-bottom: 0.2rem;
-	font-size: 0.2rem;
+text-align: left;
+margin-bottom: 0.2rem;
+font-size: 0.2rem;
 }
 .videoCourses p{
-    margin-top: -1rem;
+margin-top: -1rem;
 }
 .videoCourses p span{
-    font-size: 0.2rem;
+font-size: 0.2rem;
 }
 .mianfei{
-    font-size: 0.2rem;
-    display: block;
-    margin-top: 0.8rem;
-    margin-right: 0.16rem;
-    float: right;
-    color: #aed9ae;
+font-size: 0.2rem;
+display: block;
+margin-top: 0.8rem;
+margin-right: 0.16rem;
+float: right;
+color: #aed9ae;
 }
 .feiyong{
-    font-size: 0.2rem;
-    display: block;
-    margin-top: 0.8rem;
-    margin-right: 0.16rem;
-    float: right;
-    color: #ffaf55; 
+font-size: 0.2rem;
+display: block;
+margin-top: 0.8rem;
+margin-right: 0.16rem;
+float: right;
+color: #ffaf55;
 }
 .footer{
-	width: 6.4rem;
-	height: 0.8rem;
-	display: flex;
-	position: fixed;
-	bottom: 0;
-	background: #fff;
+width: 6.4rem;
+height: 0.8rem;
+display: flex;
+position: fixed;
+bottom: 0;
+background: #fff;
 }
 .toWhere{
-	margin-top: -0.4rem;
-	width: 2rem;
+margin-top: -0.4rem;
+width: 2rem;
 }
 .toWhere img{
-	width: 0.4rem;
-	height: 0.6rem;
-	margin-left: 1rem;
+width: 0.4rem;
+height: 0.6rem;
+margin-left: 1rem;
 }
 .el-row {
-    margin-bottom: 20px;
+margin-bottom: 20px;
 }
 .bg-purple-dark {
-    background: #99a9bf;
+background: #99a9bf;
 }
 .grid-content {
-    border-radius: 4px;
-    min-height: 36px;
+border-radius: 4px;
+min-height: 36px;
 }
-/* .el-button{
-    width: 0.2rem;
-} */
 </style>
