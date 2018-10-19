@@ -15,7 +15,7 @@
         <hr size="1" color="#e0e0e0" width="100%">
         <div>
             <el-tabs v-model="activeName" @tab-click="handleClick">
-                <el-tabs :tab-position="tabPosition" style="margin-top:-0.8rem;">
+                <el-tabs v-model="activeName" @tab-click="handleClick" :stretch="stretch" >
                     <el-tab-pane label="专题课">
                         <div class="hotCourses">
                             <div class="videoCourses">
@@ -80,7 +80,6 @@
                             </div>
                         </div>
                     </el-tab-pane>
-                    <el-tab-pane label=""></el-tab-pane>
                 </el-tabs>
             </el-tabs>
         </div>
@@ -132,7 +131,8 @@ export default {
     return {
       dialogTableVisible: false,
       activeName: 'second',
-      dialogFormVisible: false
+      dialogFormVisible: false,
+      stretch:'true'
     }
   },
   methods: {

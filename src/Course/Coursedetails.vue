@@ -29,15 +29,26 @@
                 </div>
             </div>
         </div>
+        <el-tabs v-model="activeName" @tab-click="handleClick" :stretch="stretch">
+            <el-tab-pane label="课程目录" name="first">用户管理</el-tab-pane>
+            <el-tab-pane label="课程简介" name="second">配置管理</el-tab-pane>
+            <el-tab-pane label="课程评论" name="third">角色管理</el-tab-pane>
+        </el-tabs>
     </div>
 </template>
 <script>
     export default{
         data(){
             return{
-                
+                activeName: 'second',
+                stretch:'true'
             };
-        }
+        },
+        methods: {
+      handleClick(tab, event) {
+        console.log(tab, event);
+      }
+    }
     }
 </script>
 <style scoped>
@@ -87,6 +98,9 @@ width: 5rem;
     display: block;
     text-indent: -1999px;
 }
+.video{
+    height:3.09rem;
+    }
 .video .hdImg{
     width: 100%;
     vertical-align: top;
@@ -109,8 +123,9 @@ width: 5rem;
     left: 0;
     right: 0;
     top: 0;
-    bottom: 3.5px;
     background-color: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 /* 清楚浮动 */
 .nav::after{
@@ -121,11 +136,10 @@ clear:both;
 div .playbtn{
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
     margin: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    background: url(../assets/Course/播放.png)
+    background: url(../assets/Course/播放.png);
+    background-size: .9rem .9rem;
 }
 /* 相对定位 */
 .f-pa{
