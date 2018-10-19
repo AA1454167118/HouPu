@@ -29,10 +29,15 @@
                 </div>
             </div>
         </div>
-        <el-tabs v-model="activeName" @tab-click="handleClick" :stretch="stretch">
-            <el-tab-pane label="课程目录" name="first">用户管理</el-tab-pane>
-            <el-tab-pane label="课程简介" name="second">配置管理</el-tab-pane>
-            <el-tab-pane label="课程评论" name="third">角色管理</el-tab-pane>
+        <el-tabs v-model="activeName" @tab-click="handleClick" :stretch="stretchRule">
+            <el-tab-pane label="课程目录" name="first">
+                    <el-steps direction="vertical" :active="1">
+                          <el-step title=""><div><p class="serial">第1张<span class="serial-p"></span>高中物理相互作用</p></div> </el-step>
+                          <el-step title=""></el-step>    
+                    </el-steps>
+            </el-tab-pane>
+            <el-tab-pane label="课程简介" name="second">配置管理22</el-tab-pane>
+            <el-tab-pane label="课程评论" name="third">角色管理33</el-tab-pane>
         </el-tabs>
     </div>
 </template>
@@ -41,7 +46,7 @@
         data(){
             return{
                 activeName: 'second',
-                stretch:'true'
+                stretchRule:true,
             };
         },
         methods: {
@@ -144,7 +149,15 @@ div .playbtn{
 /* 相对定位 */
 .f-pa{
         position: absolute;
+        width: 6.4rem;
 }
+.serial{
+    font-size: 0.28rem;
+}
+.serial .serial-p{
+    padding-left: 0.15rem;
+}
+
 
 
 

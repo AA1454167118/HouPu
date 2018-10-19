@@ -132,7 +132,7 @@ export default {
       dialogTableVisible: false,
       activeName: 'second',
       dialogFormVisible: false,
-      stretch:'true'
+      stretch:true
     }
   },
   methods: {
