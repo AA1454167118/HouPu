@@ -5,6 +5,7 @@ import Course from '@/Course/Course'
 import My from '@/My/My'
 import Comments from '@/Comments/Comments'
 import Coursedetails from '@/Course/Coursedetails'
+import ConfirmationOrders from '@/ConfirmationOrders/ConfirmationOrders'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/Comments',
       name: 'Comments',
       component: Comments
+    },
+    {
+      path: '/ConfirmationOrders',
+      name: 'ConfirmationOrders',
+      component: ConfirmationOrders
     }
   ]
 })

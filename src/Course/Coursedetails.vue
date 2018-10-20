@@ -31,10 +31,11 @@
         </div>
         <el-tabs v-model="activeName" @tab-click="handleClick" :stretch="stretchRule">
             <el-tab-pane label="课程目录" name="first">
-                    <el-steps direction="vertical" :active="1">
-                          <el-step title=""><div><p class="serial">第1张<span class="serial-p"></span>高中物理相互作用</p></div> </el-step>
-                          <el-step title=""></el-step>    
-                    </el-steps>
+                
+                <el-steps direction="vertical" :active="1">
+                      <el-step title=""><div><p class="serial">第1张<span class="serial-p"></span>高中物理相互作用</p></div> </el-step>
+                      <el-step title=""></el-step>    
+                </el-steps>
             </el-tab-pane>
             <el-tab-pane label="课程简介" name="second">配置管理22</el-tab-pane>
             <el-tab-pane label="课程评论" name="third">角色管理33</el-tab-pane>
