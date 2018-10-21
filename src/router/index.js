@@ -4,7 +4,11 @@ import Home from '@/Home/Home'
 import Course from '@/Course/Course'
 import My from '@/My/My'
 import Comments from '@/Comments/Comments'
+<<<<<<< HEAD
 import ConfirmationOrders from '@/ConfirmationOrders/ConfirmationOrders'
+=======
+import Coursedetails from '@/Course/Coursedetails'
+>>>>>>> cc49380e0ea8f34c4d49205656daea305ac5dbb0
 
 Vue.use(Router)
 
@@ -19,6 +23,11 @@ export default new Router({
       path: '/Course',
       name: 'Course',
       component: Course
+    },
+    {
+      path:'/Course/Coursedetails',
+      name:'Coursedetails',
+      component:Coursedetails
     },
     {
       path: '/My',
