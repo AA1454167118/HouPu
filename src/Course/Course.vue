@@ -1,5 +1,11 @@
 <template>
     <div class="outerLayer">
+        <div class="head">
+            <span @click="goBack" class="goBack">返回</span>
+            <span class="close">关闭</span>
+            <span class="title">厚朴教育-课程</span>
+            <span class="more"><img src="../assets/Comments/more.png" alt=""></span>
+        </div>
         <div class="header">
            <ul>
                <li><span @click="dialogTableVisible = true">语文</span><img src="../assets/Course/subscript.png" alt=""><img src="../assets/Course/shu.png" alt="" class="shu"></li>
@@ -14,73 +20,71 @@
         </div>
         <hr size="1" color="#e0e0e0" width="100%">
         <div>
-            <el-tabs v-model="activeName" @tab-click="handleClick">
-                <el-tabs v-model="activeName" @tab-click="handleClick" :stretch="stretch" >
-                    <el-tab-pane label="专题课">
-                        <div class="hotCourses">
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-1.png" alt="">
-                                <p><span>高考化学复习</span><span class="mianfei">免费</span></p>                            
-                            </div>
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-2.png" alt="">
-                                <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
-                            </div>
+            <el-tabs v-model="activeName" @tab-click="handleClick" :stretch="stretch">
+                <el-tab-pane label="专题课" name="first">
+                    <div class="hotCourses">
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-1.png" alt="">
+                            <p><span>高考化学复习</span><span class="mianfei">免费</span></p>                            
                         </div>
-                        <div class="hotCourses">
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-1.png" alt="">
-                                <p><span>高考化学复习</span><span class="mianfei">免费</span></p>                            
-                            </div>
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-2.png" alt="">
-                                <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
-                            </div>
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-2.png" alt="">
+                            <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
                         </div>
-                        <div class="hotCourses">
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-1.png" alt="">
-                                <p><span>高考化学复习</span><span class="mianfei">免费</span></p>                            
-                            </div>
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-2.png" alt="">
-                                <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
-                            </div>
+                    </div>
+                    <div class="hotCourses">
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-1.png" alt="">
+                            <p><span>高考化学复习</span><span class="mianfei">免费</span></p>                            
                         </div>
-                    </el-tab-pane>
-                    <el-tab-pane label="长期班">
-                        <div class="hotCourses">
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-1.png" alt="">
-                                <p><span>高考化学复习</span><span class="mianfei">免费</span></p>                            
-                            </div>
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-2.png" alt="">
-                                <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
-                            </div>
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-2.png" alt="">
+                            <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
                         </div>
-                        <div class="hotCourses">
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-1.png" alt="">
-                                <p><span>高考化学复习</span><span class="feiyong">￥200</span></p>                            
-                            </div>
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-2.png" alt="">
-                                <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
-                            </div>
+                    </div>
+                    <div class="hotCourses">
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-1.png" alt="">
+                            <p><span>高考化学复习</span><span class="mianfei">免费</span></p>                            
                         </div>
-                        <div class="hotCourses">
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-1.png" alt="">
-                                <p><span>高考化学复习</span><span class="mianfei">免费</span></p>                            
-                            </div>
-                            <div class="videoCourses">
-                                <img src="../assets/home/videoCourses-2.png" alt="">
-                                <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
-                            </div>
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-2.png" alt="">
+                            <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
                         </div>
-                    </el-tab-pane>
-                </el-tabs>
+                    </div>
+                </el-tab-pane>
+                <el-tab-pane label="长期班">
+                    <div class="hotCourses">
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-1.png" alt="">
+                            <p><span>高考化学复习</span><span class="mianfei">免费</span></p>                            
+                        </div>
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-2.png" alt="">
+                            <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
+                        </div>
+                    </div>
+                    <div class="hotCourses">
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-1.png" alt="">
+                            <p><span>高考化学复习</span><span class="feiyong">￥200</span></p>                            
+                        </div>
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-2.png" alt="">
+                            <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
+                        </div>
+                    </div>
+                    <div class="hotCourses">
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-1.png" alt="">
+                            <p><span>高考化学复习</span><span class="mianfei">免费</span></p>                            
+                        </div>
+                        <div class="videoCourses">
+                            <img src="../assets/home/videoCourses-2.png" alt="">
+                            <p><span>高中物理-相互作用</span><span class="mianfei">免费</span></p>
+                        </div>
+                    </div>
+                </el-tab-pane>
             </el-tabs>
         </div>
         <el-dialog :visible.sync="dialogTableVisible" width="70%">
@@ -130,7 +134,7 @@ export default {
   data () {
     return {
       dialogTableVisible: false,
-      activeName: 'second',
+      activeName: 'first',
       dialogFormVisible: false,
       stretch:true
     }
@@ -138,6 +142,9 @@ export default {
   methods: {
     handleClick (tab, event) {
       console.log(tab, event)
+    },
+    goBack () {
+      this.$router.go(-1)
     }
   }
 }
@@ -145,6 +152,37 @@ export default {
 <style scoped>
 .outerLayer{
 width: 6.4rem;
+}
+.head{
+    width: 6.4rem;
+    height: 0.9rem;
+    background: #1b1a1f;
+    color: #fff;
+    font-size: 0.3rem;
+}
+.goBack{
+    display: inline-block;
+    background: url('../assets/Comments/goBack.png') no-repeat 0.05rem;
+    background-size: 0.2rem 0.3rem;
+    padding-left: 0.3rem;
+    margin-top: 0.2rem;
+    margin-left: 0.1rem;
+}
+.close{
+    display: inline-block;
+    margin-left: 0.1rem;
+}
+.title{
+    display: inline-block;
+    margin-left: 0.3rem;
+}
+.more{
+    display: inline-block;
+    margin-left: 1.7rem;
+}
+.more img{
+    width: 0.4rem;
+    height: 0.1rem;
 }
 .header{
 position: relative;
