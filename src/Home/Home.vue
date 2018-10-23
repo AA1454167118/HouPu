@@ -5,7 +5,7 @@
 		</div>
 		<div class="nav">
 			<div class="Grid-cell">
-				<router-link to="/">
+				<router-link to="/Course">
 					<img src="../assets/home/nav-1.png" alt="">
 	        		<p>0元体验</p>
 				</router-link>	
@@ -138,10 +138,10 @@
 				<router-link to="/"><img src="../assets/home/home.png" alt=""></router-link>
 			</div>
 			<div class="toWhere">
-				<router-link to="/"><img src="../assets/home/toCourse.png" alt=""></router-link>
+				<router-link to="/Course"><img src="../assets/home/toCourse.png" alt=""></router-link>
 			</div>
 			<div class="toWhere">
-				<router-link to="/"><img src="../assets/home/toMy.png" alt=""></router-link>
+				<router-link to="/My"><img src="../assets/home/toMy.png" alt=""></router-link>
 			</div>
 		</div>
 	</div>

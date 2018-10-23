@@ -9,7 +9,7 @@
         <div class="comments">
             <p>课程名称：小学语文一年级（上）</p>
             <div class="block">
-                <el-rate v-model="value1"></el-rate>
+                <el-rate v-model="value1" allow-half="true"></el-rate>
             </div>
             <textarea rows="8" cols="50" placeholder="您的宝贵评价，对我们非常重要哦~"></textarea>
             <div class="submitTo">提交</div>

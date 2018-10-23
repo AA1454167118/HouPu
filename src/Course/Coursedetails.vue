@@ -45,18 +45,74 @@
                     <span>【讲义下载】初中物理试题（上）</span><img src="../assets/Course/download.png" alt="">
                 </div>
                 <div style="height:1rem;"></div>
-                <div class="footer">
-                    <div class="actualPayments">
-                        <span>￥600.00</span>
-                    </div>
-                    <div class="submitOrder">
-                        <p>立即订购</p>
-                    </div>
-                </div>
             </el-tab-pane>
             <el-tab-pane label="课程简介" name="second">简介简介简介</el-tab-pane>
-            <el-tab-pane label="课程评论" name="third">角色管理33</el-tab-pane>
+            <el-tab-pane label="课程评论" name="third">
+                <div class="comment">
+                    <div class="user">
+                        <div class="userInformation">
+                            <img src="../assets/Course/user.png" alt="">
+                        </div>
+                        <div class="userName">
+                            <span>爱笑的眼睛</span>
+                        </div>
+                        <div class="rate">
+                            <el-rate v-model="value5" disabled text-color="#ff9900">
+                            </el-rate>
+                        </div>
+                        <div class="time">2018-09-20 10:00:00</div>
+                    </div>
+                    <div class="userComment">
+                        <p>老师讲的不错，很生动！课程内容不错，值得学习。</p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="user">
+                        <div class="userInformation">
+                            <img src="../assets/Course/user.png" alt="">
+                        </div>
+                        <div class="userName">
+                            <span>爱笑的眼睛</span>
+                        </div>
+                        <div class="rate">
+                            <el-rate v-model="value5" disabled text-color="#ff9900">
+                            </el-rate>
+                        </div>
+                        <div class="time">2018-09-20 10:00:00</div>
+                    </div>
+                    <div class="userComment">
+                        <p>老师讲的不错，很生动！课程内容不错，老师讲的很细，课程由简入繁，逐步分析。满意，满意，非常满意。</p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="user">
+                        <div class="userInformation">
+                            <img src="../assets/Course/user.png" alt="">
+                        </div>
+                        <div class="userName">
+                            <span>爱笑的眼睛</span>
+                        </div>
+                        <div class="rate">
+                            <el-rate v-model="value45" disabled text-color="#ff9900">
+                            </el-rate>
+                        </div>
+                        <div class="time">2天前</div>
+                    </div>
+                    <div class="userComment">
+                        <p>老师讲的不错，很生动！课程内容不错，老师讲的很细，课程由简入繁，逐步分析。满意，满意，非常满意。</p>
+                    </div>
+                </div>
+                <div style="height:1rem;"></div>
+            </el-tab-pane>
         </el-tabs>
+        <div class="footer">
+            <div class="actualPayments">
+                <span>￥600.00</span>
+            </div>
+            <div class="submitOrder">
+                <p><router-link to="/ConfirmationOrders" style="color:#fff;">立即订购</router-link></p>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -65,6 +121,8 @@ export default{
         return{
             activeName: 'first',
             stretchRule:true,
+            value5: 5,
+            value45: 4.5,
              playerOptions: {
                 //playbackRates: [0.7, 1.0, 1.5, 2.0], //播放速度
                 autoplay: false, //如果true,浏览器准备好时开始回放。
@@ -260,6 +318,50 @@ export default{
     font-size: 0.26rem;
     color: #fd6801;
 }
+.comment{
+    width: 5.8rem;
+    padding-bottom: 0.4rem;
+    margin-left: 0.3rem;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+.user{
+    height: 0.4rem;
+    margin-top: 0.3rem;
+}
+.userInformation,.userName,.rate,.time{
+    float: left;
+}
+.userInformation{
+    margin-top: -0.65rem;
+}
+.userInformation img{
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+}
+.userName{
+    margin-left: 0.1rem;
+    font-size: 0.25rem;
+}
+.time{
+    position: absolute;
+    right: 0;
+    top: 0.08rem;
+    font-size: 0.17rem;
+    color: #b9b9b9;
+}
+.rate{
+    margin-top: -0.45rem;
+    margin-left: 0.1rem;
+}
+.userComment{
+    width: 5rem;
+    margin-top: 0.1rem;
+    margin-left: 0.6rem;
+}
+.userComment p{
+    font-size: 0.21rem;
+    color: #767678;
+}
 </style>
-
-
